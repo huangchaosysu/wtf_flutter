@@ -77,7 +77,7 @@ dependencies {
 
 ## 在原生View里面展示地图
 
-1. implement ActivityAware in AmapFlutter2Plugin(you plugin class)
+#### implement ActivityAware in AmapFlutter2Plugin(you plugin class)
 
 ```
 // ActivityAware提供了监听Activity的生命周期相关的回调函数
@@ -148,7 +148,7 @@ class AmapFlutter2Plugin: FlutterPlugin, MethodCallHandler, ActivityAware {
 ```
 
 
-2. add args to ViewFactory
+#### add args to ViewFactory
 
 ```
 package com.example.amap_flutter2
@@ -173,7 +173,7 @@ class AMapViewFactory(val activity: Activity) : PlatformViewFactory(StandardMess
 }
 ```
 
-3. implement DefaultLifecycleObserver in AMapView, and add args
+#### implement DefaultLifecycleObserver in AMapView, and add args
 
 ```
 import androidx.lifecycle.LifecycleOwner
@@ -216,5 +216,5 @@ internal class AMapView(context: Context, id: Int, activity: FlutterActivity, cr
 }
 ```
 
-4. 检查效果
+#### 检查效果
 `flutter run`
